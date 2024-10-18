@@ -41,7 +41,10 @@ for ((i=0; i<$terminal_width; i++)); do
 done
 
 ###OUTPUT###
-echo -e "\n$starLine\n"
+for i in ((i=0; i<$terminal_width; i++)); do
+    echo -e "\033[38;5;${i}m * \033[0m"
+done
+echo
 
 #find correct padding to center quote
 text_length=${#quote}                
@@ -56,4 +59,9 @@ done
 #print quote
 echo -e "$spaces$color$quote$reset"
 echo -e "$spaces\t$translation"
-echo -e "\n$starLine\n"
+
+
+for i in {0..$terminal_width}; do
+    echo -e "\033[38;5;${i}m*\033[0m  "
+done
+echo
