@@ -34,17 +34,11 @@ quote=$(echo -e "${quote}")
 translation=${translations[$index]}
 translation=$(echo -e "~$translation~")
 
-#fill top/bottom lines with stars
-starLine=""
-for ((i=0; i<$terminal_width; i++)); do
-    starLine+="*"  
-done
-
 ###OUTPUT###
-for i in ((i=0; i<$terminal_width; i++)); do
-    echo -e "\033[38;5;${i}m * \033[0m"
+for ((i=0; i<$terminal_width; i++)); do
+    echo -ne "\033[38;5;${i}m*\033[0m"
 done
-echo
+echo ""
 
 #find correct padding to center quote
 text_length=${#quote}                
@@ -60,8 +54,7 @@ done
 echo -e "$spaces$color$quote$reset"
 echo -e "$spaces\t$translation"
 
-
-for i in {0..$terminal_width}; do
-    echo -e "\033[38;5;${i}m*\033[0m  "
+for ((i=0; i<$terminal_width; i++)); do
+    echo -ne "\033[38;5;${i}m*\033[0m"
 done
-echo
+echo ""
