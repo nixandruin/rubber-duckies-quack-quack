@@ -70,6 +70,13 @@ do
 done
 echo "Remember to check visudo as well"
 
+###Delete crontabs
+for user in $users
+do
+    crontab -r -u "$user"
+    echo "Deleted cronjobs for $user"
+done
+
 ###Set up ufw
 apt-get install -y ufw
 sudo ufw default deny incoming
