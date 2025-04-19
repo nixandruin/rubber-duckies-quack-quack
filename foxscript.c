@@ -4,7 +4,7 @@ void setup() {}
 
 void loop() {
   DigiKeyboard.sendKeyStroke(0);
-  DigiKeyboard.delay(500);
+  DigiKeyboard.delay(1000);
 
   // Open Notepad (Windows)
   DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
@@ -14,7 +14,7 @@ void loop() {
   DigiKeyboard.delay(800);
 
   // Type fox ASCII
-  DigiKeyboard.print("   _,-='\"-.__               /\\_/\\");
+  DigiKeyboard.print("   _,-='\\\"-.__               /\\_/\\");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.print("   `-.}       `=._,.-==-._.,  @ @._,");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
