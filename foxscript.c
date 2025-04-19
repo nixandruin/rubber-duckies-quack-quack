@@ -20,7 +20,7 @@ void loop() {
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.print("      `-.__   _,-.   )       _,.-'");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
-  DigiKeyboard.print("           `\"     G..m-\"^m`m'");
+  DigiKeyboard.print("           `\"     \\^m^/  \"`");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
 
   // Stop execution
